@@ -1,0 +1,145 @@
+
+body {
+  font-family: 'Century Gothic', Arial;
+  text-align: center;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: transparent;
+}
+
+#main {
+  padding: 0 1em 0 170px;
+  height: 100%;
+  width: 350px;
+  position: relative;
+  border: 1px solid black;
+  background-image: linear-gradient(to bottom right, white, #e0e0e0);
+}
+
+#container {
+  margin: auto;
+  width: 536px;
+  height: 500px;
+  position: relative;
+}
+
+
+#mass-a {
+  background: red;
+}
+
+#mass-b {
+  background: blue;
+  margin-bottom: 2em;
+}
+
+input[type='range'] {
+  margin-bottom: 1em;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+input[type='range']:hover {
+  opacity: 1;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: white;
+  cursor: pointer;
+	border: 1px solid black;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: white;
+  cursor: pointer;
+}
+
+#controls {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#release-btn:hover {
+  background-image: linear-gradient(to bottom, #27a532, #197021);
+}
+
+#reset-btn:hover {
+  background-image: linear-gradient(to bottom, #606060, #494949);
+}
+
+#release-btn {
+  background-color: #27a532;
+  padding: 15px 35px;
+}
+
+#reset-btn {
+  background-color: #606060;
+  padding: 15px 25px;
+}
+
+#results {
+  margin-top: 1.5em;
+  overflow-y: scroll;
+  height: 200px;
+  border: 1px solid black;
+}
+
+tr#heading-1 th {
+  border-bottom: 2px solid black;
+}
+
+th {
+  border: 1px solid grey;
+}
+
+th#a {
+  color: red;
+}
+
+th#b {
+  color: blue;
+}
+
+td {
+  border-right: 1px solid grey;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+img#logo {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  height: 25px;
+}

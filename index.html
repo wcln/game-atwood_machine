@@ -6,9 +6,48 @@
 	<script src="https://bclearningnetwork.com/lib/jquery/jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="shortcut icon" href="images/favicon.ico"/>
+  <script src="https://bclearningnetwork.com/lib/createjs/createjs-2015.11.26.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
 <body onload="init()">
 
+  <div id="container">
+
+    <canvas id="gameCanvas" width="170px" height="500px">
+    </canvas>
+    <div id="main">
+      <img id="logo" src="images/logo.png"/>
+      <div id="header">
+        <h1>Atwood's Machine</h1>
+      </div>
+      <!-- <div id="instructions">
+        <p>Set the mass of the two cylinders and then press the Release button to see what happens! Data will be collected in the bottom table.</p>
+      </div> -->
+      <div id="controls">
+
+        <label>Mass A</label>
+        <input id="mass-a" type="range"/>
+
+        <label>Mass B</label>
+        <input id="mass-b" type="range"/>
+
+        <button id="release-btn" onclick="release()">Release</button>
+        <button id="reset-btn" onclick="reset()">Reset</button>
+
+      </div>
+      <div id="results">
+        <table>
+          <tr id="heading-1"><th></th><th id="a" colspan="2">Mass A</th><th id="b" colspan="2">Mass B</th></tr>
+          <tr id="heading-2"><th>Time (s)</th><th>Height (m)</th><th>Velocity (m/s)</th><th>Height (m)</th><th>Velocity (m/s)</th></tr>
+          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
