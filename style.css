@@ -12,8 +12,12 @@ canvas {
   background: transparent;
 }
 
+:disabled {
+	opacity: 0.5;
+}
+
 #main {
-  padding: 0 1em 0 170px;
+  padding: 0 1em 0 190px;
   height: 100%;
   width: 350px;
   position: relative;
@@ -27,7 +31,6 @@ canvas {
   height: 500px;
   position: relative;
 }
-
 
 #mass-a {
   background: red;
@@ -49,6 +52,10 @@ input[type='range'] {
   transition: opacity .2s;
 }
 
+input[type='range']::-moz-range-track {
+  visibility: hidden;
+}
+
 input[type='range']:hover {
   opacity: 1;
 }
@@ -57,7 +64,7 @@ input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 25px;
-  height: 25px;
+  height: 31px;
   background: white;
   cursor: pointer;
 	border: 1px solid black;
@@ -65,7 +72,7 @@ input[type='range']::-webkit-slider-thumb {
 
 input[type='range']::-moz-range-thumb {
   width: 25px;
-  height: 25px;
+  height: 31px;
   background: white;
   cursor: pointer;
 }
@@ -109,7 +116,7 @@ button {
 #results {
   margin-top: 1.5em;
   overflow-y: scroll;
-  height: 200px;
+  height: 180px;
   border: 1px solid black;
 }
 
@@ -142,4 +149,8 @@ img#logo {
   right: 2px;
   top: 2px;
   height: 25px;
+}
+
+textarea {
+  resize: none;
 }

@@ -25,11 +25,11 @@
       </div> -->
       <div id="controls">
 
-        <label>Mass A</label>
-        <input id="mass-a" type="range"/>
+        <label>Mass A = <span id="mass-a-value">2.5</span> kg</label>
+        <input id="mass-a" type="range" min="0" max="50" value="25" />
 
-        <label>Mass B</label>
-        <input id="mass-b" type="range"/>
+        <label>Mass B = <span id="mass-b-value">2.5</span> kg</label>
+        <input id="mass-b" type="range" min="0" max="50" value="25" />
 
         <button id="release-btn" onclick="release()">Release</button>
         <button id="reset-btn" onclick="reset()">Reset</button>
@@ -39,12 +39,6 @@
         <table>
           <tr id="heading-1"><th></th><th id="a" colspan="2">Mass A</th><th id="b" colspan="2">Mass B</th></tr>
           <tr id="heading-2"><th>Time (s)</th><th>Height (m)</th><th>Velocity (m/s)</th><th>Height (m)</th><th>Velocity (m/s)</th></tr>
-          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
-          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
-          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
-          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
-          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
-          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
         </table>
       </div>
     </div>
