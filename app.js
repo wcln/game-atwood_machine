@@ -10,21 +10,30 @@ var lineA, lineB, shadowA, shadowB;
 
 var spinningTween = null;
 
+var ua = window.navigator.userAgent;
+var is_ie = /MSIE|Trident/.test(ua);
+
 function init() {
-  STAGE_WIDTH = parseInt(document.getElementById("gameCanvas").getAttribute("width"));
-  STAGE_HEIGHT = parseInt(document.getElementById("gameCanvas").getAttribute("height"));
+  if (is_ie) {
+    $('#container').empty();
+    $('#container').html("<h1>This WCLN media is not supported on Internet Explorer. Please use Chrome or Firefox.</h1>")
+    // alert("This WCLN media is not supported on Internet Explorer. Please use Chrome or Firefox.");
+  } else {
+    STAGE_WIDTH = parseInt(document.getElementById("gameCanvas").getAttribute("width"));
+    STAGE_HEIGHT = parseInt(document.getElementById("gameCanvas").getAttribute("height"));
 
-  // Init stage object.
-  stage = new createjs.Stage("gameCanvas");
-  stage.mouseEventsEnabled = true;
-  stage.enableMouseOver(); // Default, checks the mouse 20 times/second for hovering cursor changes
+    // Init stage object.
+    stage = new createjs.Stage("gameCanvas");
+    stage.mouseEventsEnabled = true;
+    stage.enableMouseOver(); // Default, checks the mouse 20 times/second for hovering cursor changes
 
-  setupManifest();
-  startPreload();
+    setupManifest();
+    startPreload();
 
-  initListeners();
+    initListeners();
 
-  stage.update();
+    stage.update();
+  }
 }
 
 function initGraphics() {
