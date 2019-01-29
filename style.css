@@ -146,9 +146,9 @@ table {
 
 img#logo {
   position: absolute;
-  right: 2px;
-  top: 2px;
-  height: 25px;
+  right: 1px;
+  top: 1px;
+  height: 30px;
 }
 
 textarea {
